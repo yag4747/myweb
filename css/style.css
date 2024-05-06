@@ -1012,7 +1012,7 @@ ul.portfolio li.active {
     }
     .navbar-toggle {
         margin-right: 0px;
-        margin-top: -30px;
+        margin-top: 0px;
     }
     .navbar {
         min-height: 0px;
@@ -1032,9 +1032,6 @@ ul.portfolio li.active {
     .navbar-fixed-bottom .navbar-collapse,
     .navbar-fixed-top .navbar-collapse {
         max-height: 420px;
-    }
-    .navbar-toggle {
-        margin-top: -30px;
     }
     .navbar-collapse {
         background: rgba(0, 0, 0, .9);
