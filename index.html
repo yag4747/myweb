@@ -117,7 +117,7 @@
 
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+  .wrap { width: min(1680px, 100% - clamp(32px, 7vw, 160px)); margin-inline: auto; }
   .skip {
     position: absolute; left: 16px; top: -60px; background: var(--ink); color: var(--bg);
     padding: 10px 16px; border-radius: 8px; z-index: 100; transition: top .2s;
@@ -555,6 +555,47 @@
     .tl-year { display: none; }
     .tl-card { padding: 18px; }
     .tl-end { padding-left: 38px; }
+  }
+
+  /* Wide screens: use the extra width instead of leaving empty margins */
+  @media (min-width: 1280px) {
+    body { font-size: 1.125rem; }
+    .bar { height: 76px; }
+    .hero { padding: 88px 0 128px; }
+    .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 72px; }
+    .hero h1 { font-size: clamp(3.6rem, 4.6vw, 6rem); }
+    .hero .lead { font-size: 1.35rem; max-width: 36em; }
+    .rotator { font-size: 1.5rem; }
+    .stage { min-height: 680px; }
+    .phone { width: 300px; }
+    .phone.back { width: 240px; }
+    .badge { font-size: 1.05rem; padding: 11px 20px; }
+    .sec-head { max-width: 780px; }
+    .sec-head h2 { font-size: clamp(2.6rem, 3.6vw, 4rem); }
+    section.block { padding: 120px 0; }
+    .about-grid { grid-template-columns: 380px 1fr; gap: 88px; }
+    .about-copy p { max-width: 46em; }
+    .facts b { font-size: 3.4rem; }
+    .panels { gap: 28px; }
+    .panel { min-height: 440px; padding: 44px 38px 40px; }
+    .panel h3 { font-size: 2.3rem; }
+    .work-grid { grid-template-columns: 1fr 1.2fr; gap: 96px; }
+    .viewer img { max-height: 640px; }
+    .services li { padding: 36px 16px; gap: 64px; }
+    .services h3 { font-size: 2rem; }
+    .steps { gap: 44px; }
+    .quotes { gap: 32px; }
+    .quote { padding: 44px; }
+    .contact-grid { gap: 120px; }
+    .timeline, .tl-end { max-width: 1180px; }
+    .tl-item { grid-template-columns: 110px 34px 1fr; column-gap: 24px; }
+    .tl-end { padding-left: calc(110px + 24px + 17px); }
+    .tl-card { padding: 26px 32px; }
+    .tl-card h3 { font-size: 1.6rem; }
+    .tl-year { font-size: 1.8rem; }
+  }
+  @media (min-width: 1800px) {
+    html { font-size: 112%; }
   }
 
   /* Responsive */
@@ -1005,10 +1046,10 @@
       dates: 'Jun 2019 - Feb 2024',
       details: ['Delivered 9 React Native apps across recruitment, dating, marketplace, real estate, fintech, e-commerce and social messaging.', 'Turned approved design wireframes into pixel-accurate screens and reusable components.', 'Gathered requirements, estimated timelines and contributed to sprint planning and delivery milestones.', 'Acted as the day-to-day client contact and worked with QA to ship stable releases.', 'Key apps: Black Books Air, Meetoory, Gollgi, JoinHome, Service Herd, Zuzu Pots, Fastkash, Tenecy and Triva Social.'],
       tags: ['React Native', 'TypeScript', 'Redux', 'React Query', 'SendBird'] },
-    { type: 'experience', year: '2024', title: 'Freelance Software Engineer', org: 'Upwork Inc', where: 'Remote',
+    { type: 'experience', year: '2024', title: 'Freelance Software Engineer', org: 'Self-employed', where: 'Remote',
       dates: 'Feb 2024 - Present', current: true,
-      details: ['Design and build e-commerce, e-document and enterprise applications end to end, from requirements to production.', 'Integrate REST APIs and third-party services, and tune performance and cross-platform compatibility.', 'Notable projects: eDocket Customer App, eDocket Driver App and Buzzmi Web Platform.'],
-      tags: ['Next.js', 'React.js', 'React Native', 'TypeScript'] }
+      details: ['Design and build e-commerce, e-document and enterprise applications end to end, from requirements to production.', 'Integrate REST APIs and third-party services, and tune performance and cross-platform compatibility.', 'Build Next.js web applications, from the first page to deployment.', 'Integrate OpenAI into apps and websites to add AI-powered features.', 'Work with Claude as part of my AI development workflow.', 'Notable projects: eDocket Customer App, eDocket Driver App and Buzzmi Web Platform.'],
+      tags: ['Next.js', 'React.js', 'React Native', 'TypeScript', 'OpenAI', 'Claude'] }
   ];
 
   const tlList = document.getElementById('timeline');
